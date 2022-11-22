@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="editor.css">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="escolha">Select Your Character</h1>
+        <div id="CharacterP1" class="CharacterP1 characterBox"></div>
+        <div id="CharacterP2" class="CharacterP2 characterBox"></div>
+
+
+
+        <div class="p1">
+            <h3 id="character1Name">Gohan</section>
+            </h3>
+        </div>
+        <div class="p2">
+            <h3 id="character2Name">Goku-Kid </section>
+            </h3>
+        </div>
+        <div class="personagens" id="fighters">
+            <div class="quadrado" name="Gohan" id="Gohan"></div>
+            <div class="quadrado" name="Goku-kid" id="Goku-Kid"></div>
+            <div class="quadrado" name="cell" id="Cell"></div>
+            <div class="quadrado" name="freeza" id="Freeza"></div>
+            <div class="quadrado" name="gogeta" id="Gogeta"></div>
+            <div class="quadrado" name="vegeta" id="Vegeta"></div>
+            <div class="quadrado" name="goku" id="Goku"></div>
+            <div class="quadrado" name="Bills" id="Bills"></div>
+            <div class="quadrado" name="Kuririn" id="Kuririn"></div>
+        </div>
+    </div>
+
+    <script >
+
+        const characterDiv = document.getElementsByClassName('quadrado');
+
+
+        const player1 = {
+            Player: 1,
+            situation: true,
+            character: null,
+            previewDiv: document.getElementById("CharacterP1"),
+            nameDiv: document.getElementById("character1Name"),
+
+
+        }
+
+        const player2 = {
+            Player: 2,
+            situation: false,
+            character: null,
+            previewDiv2: document.getElementById("CharacterP2"),
+            nameDiv2: document.getElementById("character2Name"),
+
+        }
+        selectCharacterP1()
+        function selectCharacterP1() {
+            for (let div of characterDiv) {
+                div.addEventListener('mouseover', function nameCharacter() {
+                    onCharacterHover(div)
+                });
+                div.addEventListener('click', function select() {
+                    changeActivePlayer(div)
+
+                })
+
+
+            }
+        }
+        function selectCharacterP2(){
+            for (let div of characterDiv) {
+                div.addEventListener('mouseover', function nameCharacter() {
+                    onCharacterHover2(div)
+                });
+                
+
+            }
+
+        }
+
+        function getActivePlayer2() {
+            const P2 = Object.keys(player2);
+            
+            for (let key of P2) {
+                if (player2.situation) {
+                    return player2;
+                }
+            }
+           
+            
+        }
+
+        function getActivePlayer1() {
+            const P1 = Object.keys(player1);
+            
+            for (let key of P1) {
+                if (player1.situation) {
+                    return player1;
+                }
+            }
+           
+            
+        }
+        function getActivePlayer2() {
+            const keys = Object.keys(player2);
+            for (let key of keys) {
+                if (player2.situation == true) {
+                    return player2;
+                }
+            }
+        }
+
+        function changeActivePlayer(character) {
+            const activePlayer1 = getActivePlayer1();
+            
+            
+            if(activePlayer1 != null){
+            let resposta = confirm('escolher ' + event.target.id)
+            activePlayer1.situation = false;
+            
+            
+            player2.situation = true;
+            if(player2.situation==true){
+                $(".quadrado").click(function () {
+                    confirm('escolher ' + event.target.id)
+                    alert('hora da batalha ');
+                    player2.situation = false
+                });
+
+            }                   
+        }
+            
+        }
+        
+        function setCharacter(player, characterName) {
+            player1.character = characterName;
+        }
+
+
+
+
+        function onCharacterHover(character) {
+            
+            
+            const activePlayer1 = getActivePlayer1()
+            const activePlayer2 = getActivePlayer2()
+            const keys = Object.keys(player1);
+            const style = getComputedStyle(character);
+            const characterName = character.getAttribute('name');
+            const imageUrl = style.backgroundImage;
+            
+            if (activePlayer1 != null) {
+                activePlayer1.character = characterName;
+                activePlayer1.previewDiv.style.backgroundImage = imageUrl;
+                activePlayer1.nameDiv.innerHTML = characterName.charAt(0).toUpperCase() + characterName.slice(1);
+            } 
+
+            if(activePlayer2 != null){
+
+                activePlayer2.character = characterName;
+                activePlayer2.previewDiv2.style.backgroundImage = imageUrl;
+                activePlayer2.nameDiv2.innerHTML = characterName.charAt(0).toUpperCase() + characterName.slice(1);
+
+            }
+
+        }
+
+
+
+
+
+        console.log(player1)
+        console.log(player2)
+    </script>
+
+</body>
+
+</html>
