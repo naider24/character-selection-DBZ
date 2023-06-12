@@ -1,0 +1,268 @@
+body{
+    margin: 0;
+    overflow: hidden;
+}
+.container{
+    background-image: url(imagens/dragao.jpg );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -20px;
+   width: 100vw;
+   height: 100vh;
+   
+   
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   
+   
+}
+.logo-seleção{
+    background-image: url(imagens/logo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 650px;
+    height: 250px;
+}
+.logo{
+    width: 500px;
+    height: 150px;
+}
+.logo-seleção{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.selection{
+    
+    display: flex;
+    
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    font-size: 30px;
+    text-shadow: 3px;
+    
+    color: aliceblue;
+    text-shadow: 4px 4px 4px black;
+    
+    
+    
+
+}
+.personagens{
+    
+  
+    
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    width: 400px;
+    height: 400px;
+    margin-block-end: 90px;
+    
+    
+    border-radius: 5px;
+
+    
+
+}
+.quadrado {
+    display: flex;
+    flex-direction: row;
+    
+    
+    flex-wrap: wrap;
+    
+    margin: 10px;
+    margin-left: 13px;
+    
+    width: 100px;
+    height: 100px;
+    background-color: rgb(227, 228, 228);
+    border: 2px solid aliceblue;
+    border-radius: 50%;
+    border: 2px solid rgb(227, 228, 228);
+    
+    
+    
+}
+
+.p1{
+    position: absolute;
+    left: 5%;
+    right: 90%;
+    top: 80%;
+    background-color: rgb(26, 25, 25);
+    text-align: center;
+    align-items: center;
+    border: 1px solid rgb(26, 25, 25);
+    border-radius: 24px 60px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 10px 10px 10px rgb(7, 7, 7);
+    
+    color: aliceblue;
+
+    
+    width: 400px;
+    height: 80px;
+    
+   
+    
+}
+.quadrado:hover{
+
+
+    background-color: brown;
+    box-shadow: inset -4px 0px 2px 2px rgb(114, 22, 22,0.4);
+    width: 110px;
+    height: 110px;
+}
+.p2{
+    position: absolute;
+    left: 65%;
+    right: 5%;
+    top: 80%;
+    background-color: rgb(26, 25, 25);
+    text-align: center;
+    align-items: center;
+    border: 1px solid rgb(26, 25, 25);
+    border-radius: 60px 24px;
+    font-size: 20px;
+    
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+    width: 400px;
+    height: 80px;
+    box-shadow: 10px 10px 10px rgb(7, 7, 7);
+    
+    
+}
+.escolha{ 
+    background-color: rgb(26, 25, 25);
+    padding: 10px;
+    margin-block-end: 80px;
+    margin-top: 20;
+    color: rgb(250, 250, 250);
+    border-radius: 3px;
+    
+  
+}
+.personagem ,#Gohan{
+    background-image: url(imagens/gohan2.jpg);
+    
+    background-size: 100px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+
+}
+.personagem ,#Goku-Kid{
+    background-image: url(imagens/goku-kid2.jpg);
+    
+    background-size: 100px;
+    background-repeat: no-repeat;
+    
+
+}
+
+.personagem ,#Cell{
+    background-image: url(imagens/cell.png);
+    background-position-x: -5px;
+    background-size: 180px;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+}
+.personagem ,#Freeza{
+    background-image: url(imagens/freeza.png);
+    
+    background-size: 200px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+
+}
+.personagem ,#Gogeta{
+    background-image: url(imagens/gogeta.png);
+    
+    background-size: 130px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    
+
+}
+.personagem ,#Vegeta{
+    background-image: url(imagens/vegeta2.png);
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+
+}
+.personagem ,#Goku{
+    background-image: url(imagens/goku2.png);
+    background-size: 150px;
+    background-position-x: 1px;
+    
+    
+    background-repeat: no-repeat;
+    
+
+}
+.personagem ,#Bills{
+    background-image: url(imagens/bills.png);
+    background-position-x: center;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    
+}
+.personagem ,#Kuririn{
+    background-image: url(imagens/kuririn2.jpg);
+    background-position-x: center;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    
+
+}
+
+.characterBox{
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+   
+}
+
+.CharacterP1{
+    background-image: url(imagens/gohan2.jpg);
+    left: 5%;
+    height: 90%;
+    filter: drop-shadow(0 0 1rem)
+    
+}
+.CharacterP2{
+    background-image: url(imagens/goku-kid2.jpg);
+    background-size: 250px;
+    
+    left: 65%;
+    height: 5%;
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+   
+}
+
